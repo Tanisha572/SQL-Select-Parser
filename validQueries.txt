@@ -1,0 +1,17 @@
+SELECT * FROM emp;
+SELECT ename,job,sal FROM emp;
+SELECT job,sal,ename AS 'name' FROM emp;
+SELECT job,sal,ename AS 'employee names' FROM emp;
+SELECT ename AS 'name',eno AS 'emp no' FROM emp;
+SELECT ename,deptname FROM emp e,dept d WHERE e.deptno=d.deptno;
+SELECT ename AS 'name',deptname FROM emp AS e,dept AS d WHERE e.deptno=d.deptno;
+SELECT o.OrderID,o.OrderDate,c.CustomerName FROM Customers AS c,Orders AS o WHERE c.CustomerName='Around the Horn' AND c.CustomerID=o.CustomerID;
+SELECT o.OrderID,o.OrderDate,c.CustomerName FROM Customers AS c,Orders AS o WHERE c.CustomerName='Around the Horn and back' AND c.CustomerID=o.CustomerID;
+SELECT * FROM Customers WHERE Country='Mexico';
+SELECT * FROM Customers WHERE CustomerID=1;
+SELECT title,type FROM invoice I,movie M,cust C WHERE M.mv_no=I.mv_no AND I.cust_id=C.cust_id AND fname=’Vandana’;
+SELECT ename FROM emp WHERE sal>=10000;
+SELECT ename,job,sal,eno FROM emp WHERE eno<>105;
+SELECT ename FROM emp WHERE ename='karan' OR ename='Raghav';
+SELECT o.OrderID,o.OrderDate,c.CustomerName AS 'customer name' FROM Customers AS c,Orders AS o WHERE c.CustomerName='Around the Horn' AND c.CustomerID=o.CustomerID AND o.OrderID=15469;
+SELECT o.OrderID,o.OrderDate,c.CustomerName AS 'customer name' FROM Customers c,Orders AS o WHERE c.CustomerID=o.CustomerID AND o.OrderID=15469;
